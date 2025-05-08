@@ -1,28 +1,9 @@
-Notes: 
 
-Your identification has been saved in /Users/Eva/.ssh/id_ed25519
-Your public key has been saved in /Users/Eva/.ssh/id_ed25519.pub
-The key fingerprint is:
-SHA256:n03zf74hzsgDIU8ahS0tLQSQgrWkIqzCh9PNqYj5PHw farre@msu.edu
-The key's randomart image is:
-+--[ED25519 256]--+
-|..o.o.o.=        |
-|o+ o   = =       |
-|+.o     =        |
-|= o o .o o       |
-|o+ o +  S . o    |
-|o.+ .  . + + o   |
-|oo .      + .... |
-| oo E     ..+ ..o|
-|  oo       o.o o=|
-+----[SHA256]-----+
+#to change to code use
+```
+code
+```
 
-(base) EMFAir-super-2:~ Eva$ cat ~/.ssh/id_ed25519.pub
-ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKwx9pVAjzgfVE164zJMIxOU3NIqfkwDO5nDRuPwHlij farre@msu.edu
-
-
-
-IN new terminal
 
 The default interactive shell is now zsh.
 To update your account to use zsh, please run `chsh -s /bin/zsh`.
@@ -86,12 +67,7 @@ Untracked files:
         README.md
 
 nothing added to commit but untracked files present (use "git add" to track)
-
-    
-    ```  #this will be used as code ```
-    git add -A
-    ```
-    
+bash-3.2$ git add -A
 bash-3.2$ git status
 On branch main
 
@@ -102,6 +78,75 @@ Changes to be committed:
         new file:   .gitignore
         new file:   README.md
 
-bash-3.2$ 
+bash-3.2$ git commit -m 'Added code to README'
+[main (root-commit) a40be1d] Added code to README
+ Committer: Eva Farre <Eva@EMFAir-super-2.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
 
-# never do git add * do git add -A
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 2 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 README.md
+bash-3.2$ git push
+Enter passphrase for key '/Users/Eva/.ssh/id_ed25519': 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 293 bytes | 293.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:efarre/Workshop.git
+ * [new branch]      main -> main
+bash-3.2$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+bash-3.2$ git config --global --edit
+bash-3.2$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+bash-3.2$ git add README.md 
+bash-3.2$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+
+bash-3.2$ git commit -m 'Add code to readme (for real!)'
+[main c95fcaa] Add code to readme (for real!)
+ 1 file changed, 107 insertions(+), 1 deletion(-)
+bash-3.2$ git push
+Enter passphrase for key '/Users/Eva/.ssh/id_ed25519': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.57 KiB | 1.57 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:efarre/Workshop.git
+   a40be1d..c95fcaa  main -> main
+bash-3.2$ 
