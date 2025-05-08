@@ -149,7 +149,62 @@ Writing objects: 100% (3/3), 1.57 KiB | 1.57 MiB/s, done.
 Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
 To github.com:efarre/Workshop.git
    a40be1d..c95fcaa  main -> main
+bash-3.2$ git commit -m 'Modifiy readme'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+bash-3.2$ git commit
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+bash-3.2$ git push
+Enter passphrase for key '/Users/Eva/.ssh/id_ed25519': 
+Everything up-to-date
+bash-3.2$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+bash-3.2$ git commit -a
+[main 3dfcdee] Commit message! Wow!
+ 1 file changed, 76 insertions(+), 31 deletions(-)
+bash-3.2$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+bash-3.2$ git commit -m 'another README change'
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+bash-3.2$ git commit -a
+[main 5e9d7df] another change :wq#
+ 1 file changed, 4 insertions(+), 1 deletion(-)
 bash-3.2$ 
-    
     
     git commit -m 'need to add an explanation'
